@@ -4,7 +4,7 @@ This repository is inspired by LLM-Geo, an AI-powered geospatial analysis autono
 
 # Installation
 
-Clone or download the repository, rename `your_config.ini` as `config.ini`. Then put your OpenAI API key in the `config.ini` file. Please use GPT-4, the lower versions such as 3.5 do no have enough reasoning ability to generate correct solution graph and operation code.
+Clone or download the repository, rename `your_config.ini` as `config.ini`. Then put your OpenAI API key in the `config.ini` file. We also test OpenAI GPT-4 API so for. Lower version may be not capable to generate correct results.
 
 # How to use
 This tool is used to get a causal graph for a phenomenon of several. Please input the phenomenon in the Jupyter notebook. If you do not like to use OpenAI API, you can also copy the generate prompt to ChatGPT to get the code for graph.
