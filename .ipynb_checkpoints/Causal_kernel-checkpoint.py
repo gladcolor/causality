@@ -30,18 +30,18 @@ class Causal_graph():
     by Huan Ning, 2022-02-16
     """
     def __init__(self, 
-                 phenomena,
+                 questions,
                  save_dir,                
                  role=constants.graph_role,
                  model=r"gpt-3.5-turbo",
                  stream=True,
                  verbose=True,
                 ):        
-        self.phenomena = phenomena        
+        self.questions = questions        
         self.causal_graph = None
         self.graph_response = None
         self.role = role
-        self.save_dir = save_dir
+        self.save_dir = os.path.join(save_dir, "Results)
         self.code_for_graph = ""
         self.graph_file = os.path.join(self.save_dir, f"{'_'.join(self.phenomena)}.graphml")
         self.source_nodes = None

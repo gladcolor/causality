@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="Mission Requirements" />
+    <node id="Budget Constraints" />
+    <node id="Sensor Technology" />
+    <node id="Flight Altitude" />
+    <node id="Image Resolution" />
+    <node id="Area of Interest Terrain" />
+    <node id="Environmental Conditions" />
+    <node id="Regulatory Restrictions" />
+    <node id="Data Processing Capabilities" />
+    <node id="Photogrammetric Aerial Sensor Selection" />
+    <edge source="Mission Requirements" target="Photogrammetric Aerial Sensor Selection" />
+    <edge source="Mission Requirements" target="Flight Altitude" />
+    <edge source="Mission Requirements" target="Area of Interest Terrain" />
+    <edge source="Mission Requirements" target="Budget Constraints" />
+    <edge source="Budget Constraints" target="Photogrammetric Aerial Sensor Selection" />
+    <edge source="Budget Constraints" target="Sensor Technology" />
+    <edge source="Budget Constraints" target="Data Processing Capabilities" />
+    <edge source="Sensor Technology" target="Photogrammetric Aerial Sensor Selection" />
+    <edge source="Sensor Technology" target="Image Resolution" />
+    <edge source="Flight Altitude" target="Photogrammetric Aerial Sensor Selection" />
+    <edge source="Flight Altitude" target="Image Resolution" />
+    <edge source="Image Resolution" target="Photogrammetric Aerial Sensor Selection" />
+    <edge source="Area of Interest Terrain" target="Photogrammetric Aerial Sensor Selection" />
+    <edge source="Area of Interest Terrain" target="Flight Altitude" />
+    <edge source="Environmental Conditions" target="Photogrammetric Aerial Sensor Selection" />
+    <edge source="Environmental Conditions" target="Flight Altitude" />
+    <edge source="Environmental Conditions" target="Sensor Technology" />
+    <edge source="Regulatory Restrictions" target="Photogrammetric Aerial Sensor Selection" />
+    <edge source="Regulatory Restrictions" target="Data Processing Capabilities" />
+    <edge source="Data Processing Capabilities" target="Photogrammetric Aerial Sensor Selection" />
+  </graph>
+</graphml>

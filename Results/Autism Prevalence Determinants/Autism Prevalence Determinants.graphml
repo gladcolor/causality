@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="Genetic Factors" />
+    <node id="Environmental Exposure" />
+    <node id="Parental Age" />
+    <node id="Prenatal Vitamins" />
+    <node id="Vaccination Status" />
+    <node id="Gut Microbiota" />
+    <node id="Early Development" />
+    <node id="Autism Prevalence" />
+    <edge source="Genetic Factors" target="Autism Prevalence" />
+    <edge source="Environmental Exposure" target="Autism Prevalence" />
+    <edge source="Parental Age" target="Autism Prevalence" />
+    <edge source="Prenatal Vitamins" target="Autism Prevalence" />
+    <edge source="Vaccination Status" target="Autism Prevalence" />
+    <edge source="Gut Microbiota" target="Early Development" />
+    <edge source="Early Development" target="Autism Prevalence" />
+  </graph>
+</graphml>

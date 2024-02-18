@@ -78,6 +78,8 @@ def extract_code(response, verbose=False):
     return python_code
 
 
+
+
 def get_LLM_reply(prompt="Provide Python code to read a CSV file from this URL and store the content in a variable. ",
                   system_role=r'You are a professional Geo-information scientist and developer.',
                   model=r"gpt-3.5-turbo",
@@ -357,3 +359,71 @@ def find_source_node(graph):
 
     # Return the source nodes
     return source_nodes
+
+
+def get_question_summary_from_LLM(
+    question,
+    verbose=True,
+    temperature=1,
+    stream=False,
+    retry_cnt=3,
+    sleep_sec=10,
+    # system_role=None,
+    model='gpt-4-turbo-preview',
+    ):
+
+
+    # if system_role is None:
+    #     system_role = self.role
+    #
+    # if model is None:
+    #     model = self.model
+
+    # Query ChatGPT with the prompt
+    # if verbose:
+    #     print("Geting LLM reply... \n")
+
+    summary_requirement = constants.question_summary_requirement.copy()
+    summary_requirement_str = '\n'.join([f"{idx + 1}. {line}" for idx, line in enumerate(summary_requirement)])
+
+    summary_prompt = f'Your task: {constants.question_summary_task_prefix} \n {question} \n\n' + \
+                     f'Your reply needs to meet these requirements: \n {summary_requirement_str} \n\n' + \
+                     f'Your reply example: {constants.question_summary_reply_example} \n\n'
+
+    count = 0
+    isSucceed = False
+    while (not isSucceed) and (count < retry_cnt):
+        try:
+            count += 1
+            response = client.chat.completions.create(model=model,
+            # messages=self.chat_history,  # Too many tokens to run.
+            messages=[
+                        {"role": "system", "content": constants.graph_role},
+                        {"role": "user", "content": summary_prompt},
+                      ],
+            temperature=temperature,
+            stream=stream)
+        except Exception as e:
+            # logging.error(f"Error in get_LLM_reply(), will sleep {sleep_sec} seconds, then retry {count}/{retry_cnt}: \n", e)
+            print(f"Error in get_question_summary_from_LLM(), will sleep {sleep_sec} seconds, then retry {count}/{retry_cnt}: \n",
+                  e)
+            time.sleep(sleep_sec)
+
+    response_chucks = []
+    if stream:
+        for chunk in response:
+            response_chucks.append(chunk)
+            content = chunk.choices[0].delta.content
+            if content is not None:
+                if verbose:
+                    print(content, end='')
+    else:
+        content = response.choices[0].message.content
+        # print(content)
+    # print('\n\n')
+    # print("Got LLM reply.")
+
+    # response = response_chucks  # good for saving
+    # content = extract_content_from_LLM_reply(response)
+
+    return content

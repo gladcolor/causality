@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="Diet Pattern" />
+    <node id="Physical Activity" />
+    <node id="Genetics" />
+    <node id="Socioeconomic Status" />
+    <node id="Food Environment" />
+    <node id="Education Level" />
+    <node id="Urbanization" />
+    <node id="Marketing and Advertising" />
+    <node id="Sleep Habits" />
+    <node id="Stress Levels" />
+    <node id="Obesity Prevalence" />
+    <edge source="Diet Pattern" target="Obesity Prevalence" />
+    <edge source="Physical Activity" target="Obesity Prevalence" />
+    <edge source="Genetics" target="Obesity Prevalence" />
+    <edge source="Socioeconomic Status" target="Diet Pattern" />
+    <edge source="Socioeconomic Status" target="Physical Activity" />
+    <edge source="Food Environment" target="Diet Pattern" />
+    <edge source="Education Level" target="Diet Pattern" />
+    <edge source="Education Level" target="Physical Activity" />
+    <edge source="Urbanization" target="Food Environment" />
+    <edge source="Marketing and Advertising" target="Diet Pattern" />
+    <edge source="Sleep Habits" target="Obesity Prevalence" />
+    <edge source="Stress Levels" target="Obesity Prevalence" />
+  </graph>
+</graphml>

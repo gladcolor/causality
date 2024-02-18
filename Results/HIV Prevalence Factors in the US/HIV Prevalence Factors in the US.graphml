@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="HIV Prevalence in the US" />
+    <node id="Sexual Behavior" />
+    <node id="Intravenous Drug Use" />
+    <node id="Socioeconomic Factors" />
+    <node id="Education Level" />
+    <node id="Public Health Policy" />
+    <node id="Access to Healthcare Services" />
+    <node id="HIV Testing Rates" />
+    <node id="Stigma and Discrimination" />
+    <node id="Pre-exposure Prophylaxis (PrEP) Uptake" />
+    <edge source="Sexual Behavior" target="HIV Prevalence in the US" />
+    <edge source="Intravenous Drug Use" target="HIV Prevalence in the US" />
+    <edge source="Socioeconomic Factors" target="Education Level" />
+    <edge source="Socioeconomic Factors" target="Access to Healthcare Services" />
+    <edge source="Education Level" target="HIV Testing Rates" />
+    <edge source="Public Health Policy" target="HIV Testing Rates" />
+    <edge source="Public Health Policy" target="Pre-exposure Prophylaxis (PrEP) Uptake" />
+    <edge source="Access to Healthcare Services" target="HIV Testing Rates" />
+    <edge source="HIV Testing Rates" target="HIV Prevalence in the US" />
+    <edge source="Stigma and Discrimination" target="HIV Testing Rates" />
+    <edge source="Stigma and Discrimination" target="Access to Healthcare Services" />
+    <edge source="Pre-exposure Prophylaxis (PrEP) Uptake" target="HIV Prevalence in the US" />
+  </graph>
+</graphml>

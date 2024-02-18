@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="Topography" />
+    <node id="Climate Change" />
+    <node id="Urbanization" />
+    <node id="Soil Type" />
+    <node id="Groundwater Withdrawal" />
+    <node id="Rainfall Intensity" />
+    <node id="Vegetation Cover" />
+    <node id="Drainage Capacity" />
+    <node id="Policy and Management" />
+    <node id="Flood Susceptibility" />
+    <edge source="Topography" target="Drainage Capacity" />
+    <edge source="Climate Change" target="Rainfall Intensity" />
+    <edge source="Climate Change" target="Vegetation Cover" />
+    <edge source="Urbanization" target="Drainage Capacity" />
+    <edge source="Urbanization" target="Soil Type" />
+    <edge source="Soil Type" target="Drainage Capacity" />
+    <edge source="Groundwater Withdrawal" target="Soil Type" />
+    <edge source="Rainfall Intensity" target="Flood Susceptibility" />
+    <edge source="Vegetation Cover" target="Soil Type" />
+    <edge source="Drainage Capacity" target="Flood Susceptibility" />
+    <edge source="Policy and Management" target="Urbanization" />
+    <edge source="Policy and Management" target="Drainage Capacity" />
+    <edge source="Policy and Management" target="Vegetation Cover" />
+  </graph>
+</graphml>

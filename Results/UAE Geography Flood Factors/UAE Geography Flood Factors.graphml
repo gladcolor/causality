@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="Global Warming" />
+    <node id="Increased Sea Levels" />
+    <node id="Urbanization" />
+    <node id="Desertification" />
+    <node id="Poor Urban Planning" />
+    <node id="Intense Rainfall Events" />
+    <node id="Geographical Landscape" />
+    <node id="Soil Type" />
+    <node id="Existing Drainage System" />
+    <node id="Flood Susceptibility" />
+    <node id="Reduced Soil Permeability" />
+    <edge source="Global Warming" target="Increased Sea Levels" />
+    <edge source="Global Warming" target="Desertification" />
+    <edge source="Global Warming" target="Intense Rainfall Events" />
+    <edge source="Increased Sea Levels" target="Flood Susceptibility" />
+    <edge source="Urbanization" target="Poor Urban Planning" />
+    <edge source="Urbanization" target="Reduced Soil Permeability" />
+    <edge source="Desertification" target="Reduced Soil Permeability" />
+    <edge source="Poor Urban Planning" target="Existing Drainage System" />
+    <edge source="Intense Rainfall Events" target="Flood Susceptibility" />
+    <edge source="Geographical Landscape" target="Flood Susceptibility" />
+    <edge source="Soil Type" target="Flood Susceptibility" />
+    <edge source="Existing Drainage System" target="Flood Susceptibility" />
+    <edge source="Reduced Soil Permeability" target="Flood Susceptibility" />
+  </graph>
+</graphml>

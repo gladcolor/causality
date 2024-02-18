@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="Population Density" />
+    <node id="Land Ownership" />
+    <node id="Local Regulations" />
+    <node id="Topography" />
+    <node id="Environmental Impact" />
+    <node id="Existing Infrastructure" />
+    <node id="Electromagnetic Interference" />
+    <node id="Cost Factors" />
+    <node id="Accessibility" />
+    <node id="Technology Requirements" />
+    <node id="Weather Patterns" />
+    <node id="Cellphone Tower Site Selection" />
+    <edge source="Population Density" target="Cellphone Tower Site Selection" />
+    <edge source="Population Density" target="Technology Requirements" />
+    <edge source="Land Ownership" target="Cellphone Tower Site Selection" />
+    <edge source="Land Ownership" target="Local Regulations" />
+    <edge source="Local Regulations" target="Cellphone Tower Site Selection" />
+    <edge source="Local Regulations" target="Environmental Impact" />
+    <edge source="Topography" target="Cellphone Tower Site Selection" />
+    <edge source="Topography" target="Accessibility" />
+    <edge source="Environmental Impact" target="Cellphone Tower Site Selection" />
+    <edge source="Existing Infrastructure" target="Cellphone Tower Site Selection" />
+    <edge source="Existing Infrastructure" target="Cost Factors" />
+    <edge source="Electromagnetic Interference" target="Cellphone Tower Site Selection" />
+    <edge source="Cost Factors" target="Cellphone Tower Site Selection" />
+    <edge source="Accessibility" target="Cellphone Tower Site Selection" />
+    <edge source="Technology Requirements" target="Cellphone Tower Site Selection" />
+    <edge source="Weather Patterns" target="Cellphone Tower Site Selection" />
+    <edge source="Weather Patterns" target="Existing Infrastructure" />
+  </graph>
+</graphml>

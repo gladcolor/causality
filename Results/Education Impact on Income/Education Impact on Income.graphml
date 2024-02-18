@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="Higher Education Attainment" />
+    <node id="Skills and Knowledge" />
+    <node id="Labor Market Demand" />
+    <node id="Field of Study" />
+    <node id="Economic Conditions" />
+    <node id="Geographic Location" />
+    <node id="Professional Networks" />
+    <node id="Experience" />
+    <node id="Income Level" />
+    <edge source="Higher Education Attainment" target="Skills and Knowledge" />
+    <edge source="Higher Education Attainment" target="Field of Study" />
+    <edge source="Higher Education Attainment" target="Professional Networks" />
+    <edge source="Higher Education Attainment" target="Experience" />
+    <edge source="Skills and Knowledge" target="Labor Market Demand" />
+    <edge source="Labor Market Demand" target="Income Level" />
+    <edge source="Field of Study" target="Labor Market Demand" />
+    <edge source="Economic Conditions" target="Labor Market Demand" />
+    <edge source="Economic Conditions" target="Income Level" />
+    <edge source="Geographic Location" target="Labor Market Demand" />
+    <edge source="Geographic Location" target="Income Level" />
+    <edge source="Professional Networks" target="Labor Market Demand" />
+    <edge source="Professional Networks" target="Income Level" />
+    <edge source="Experience" target="Labor Market Demand" />
+    <edge source="Experience" target="Income Level" />
+  </graph>
+</graphml>

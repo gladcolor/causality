@@ -30,20 +30,22 @@ class Causal_graph():
     by Huan Ning, 2022-02-16
     """
     def __init__(self, 
-                 phenomena,
+                 question,
+                 question_summary,
                  save_dir,                
                  role=constants.graph_role,
                  model=r"gpt-3.5-turbo",
                  stream=True,
                  verbose=True,
                 ):        
-        self.phenomena = phenomena        
+        self.question = question
+        self.question_summary = question_summary
         self.causal_graph = None
         self.graph_response = None
         self.role = role
-        self.save_dir = save_dir
+
         self.code_for_graph = ""
-        self.graph_file = os.path.join(self.save_dir, f"{'_'.join(self.phenomena)}.graphml")
+        self.graph_file = ""
         self.source_nodes = None
         self.sink_nodes = None
         
@@ -52,21 +54,26 @@ class Causal_graph():
         self.verbose = verbose
 
         self.graph_prompt = ""
-         
-        
+
+
+        self.graph_file = os.path.join(save_dir, self.question_summary, f"{self.question_summary}.graphml")
+        self.save_dir = os.path.join(save_dir, self.question_summary)
+        os.makedirs(self.save_dir, exist_ok=True)
+
         graph_requirement = constants.graph_requirement.copy()
         graph_requirement.append(f"Save the network into GraphML format, save it at: {self.graph_file}")
         graph_requirement_str =  '\n'.join([f"{idx + 1}. {line}" for idx, line in enumerate(graph_requirement)])
         
         graph_prompt = f'Your role: {self.role} \n\n' + \
-               f'Your task: {constants.graph_task_prefix} \n {self.phenomena} \n\n' + \
-               f'Your reply needs to meet these requirements: \n {graph_requirement_str} \n\n' + \
+               f'Your task: {constants.graph_task_prefix} \n {self.question} \n\n' + \
+               f'Your reply needs to meet these requirements: \n{graph_requirement_str} \n\n' + \
                f'Your reply example: {constants.graph_reply_exmaple} \n\n' 
         self.graph_prompt = graph_prompt
 
 
         self.chat_history = [{'role': 'system', 'content': role}]
 
+    # @staticmethod
     def get_LLM_reply(self,
             prompt,
             verbose=True,
@@ -148,6 +155,38 @@ class Causal_graph():
             exec(self.code_for_graph)
             self.load_graph_file()
         return self.graph_response
+
+    @staticmethod
+    def get_LLM_response_for_question_summary(self):
+        # self.chat_history.append()
+
+
+        summary_requirement = constants.question_summary_requirement.copy()
+        summary_requirement_str = '\n'.join([f"{idx + 1}. {line}" for idx, line in enumerate(summary_requirement)])
+
+        summary_prompt = f'Your task: {constants.question_summary_task_prefix} \n {self.question} \n\n' + \
+                       f'Your reply needs to meet these requirements: \n {summary_requirement_str} \n\n' + \
+                       f'Your reply example: {constants.question_summary_reply_example} \n\n'
+        self.question_summary_prompt = summary_prompt
+
+        # print("self.question_summary_prompt: \n", self.question_summary_prompt)
+
+
+
+        # self.chat_history = [{'role': 'system', 'content': self.role}]
+        response = self.get_LLM_reply(
+                                        prompt=self.question_summary_prompt,
+                                        # system_role=self.role,
+                                        model=self.model,
+                                         )
+        self.question_summary_response = response
+
+        question_summary = helper.extract_content_from_LLM_reply(response)
+        print("self.question_summary:", self.question_summary)
+
+
+
+        return question_summary
         
     def load_graph_file(self, file=""):
         G = None

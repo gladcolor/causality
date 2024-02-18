@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="Socioeconomic Status" />
+    <node id="Mental Health Issues" />
+    <node id="Genetic Predisposition" />
+    <node id="Peer Pressure" />
+    <node id="Availability of Drugs" />
+    <node id="Law Enforcement Policies" />
+    <node id="Public Education on Drug Abuse" />
+    <node id="Healthcare Access" />
+    <node id="Employment Status" />
+    <node id="Cultural Norms" />
+    <node id="Drug Abuse" />
+    <edge source="Socioeconomic Status" target="Mental Health Issues" />
+    <edge source="Socioeconomic Status" target="Peer Pressure" />
+    <edge source="Socioeconomic Status" target="Availability of Drugs" />
+    <edge source="Socioeconomic Status" target="Employment Status" />
+    <edge source="Mental Health Issues" target="Drug Abuse" />
+    <edge source="Genetic Predisposition" target="Drug Abuse" />
+    <edge source="Peer Pressure" target="Drug Abuse" />
+    <edge source="Availability of Drugs" target="Drug Abuse" />
+    <edge source="Law Enforcement Policies" target="Availability of Drugs" />
+    <edge source="Public Education on Drug Abuse" target="Drug Abuse" />
+    <edge source="Healthcare Access" target="Mental Health Issues" />
+    <edge source="Employment Status" target="Mental Health Issues" />
+    <edge source="Cultural Norms" target="Drug Abuse" />
+  </graph>
+</graphml>

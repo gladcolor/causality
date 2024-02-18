@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="Climate Change" />
+    <node id="Wildfire Frequency" />
+    <node id="Wildfire Intensity" />
+    <node id="Human Settlement Patterns" />
+    <node id="Emergency Response Measures" />
+    <node id="Public Awareness" />
+    <node id="Land Management Policies" />
+    <node id="Forest Type" />
+    <node id="Lightning Strikes" />
+    <node id="Population Count Exposed" />
+    <edge source="Climate Change" target="Wildfire Frequency" />
+    <edge source="Climate Change" target="Wildfire Intensity" />
+    <edge source="Wildfire Frequency" target="Population Count Exposed" />
+    <edge source="Wildfire Intensity" target="Population Count Exposed" />
+    <edge source="Human Settlement Patterns" target="Population Count Exposed" />
+    <edge source="Emergency Response Measures" target="Population Count Exposed" />
+    <edge source="Public Awareness" target="Population Count Exposed" />
+    <edge source="Land Management Policies" target="Wildfire Frequency" />
+    <edge source="Land Management Policies" target="Wildfire Intensity" />
+    <edge source="Forest Type" target="Wildfire Intensity" />
+    <edge source="Forest Type" target="Wildfire Frequency" />
+    <edge source="Lightning Strikes" target="Wildfire Frequency" />
+  </graph>
+</graphml>

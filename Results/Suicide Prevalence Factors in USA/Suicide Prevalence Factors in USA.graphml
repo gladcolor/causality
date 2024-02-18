@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="Mental Health Issues" />
+    <node id="Economic Factors" />
+    <node id="Substance Abuse" />
+    <node id="Access to Means" />
+    <node id="Social Isolation" />
+    <node id="Historical Traumas" />
+    <node id="Stigma Around Seeking Help" />
+    <node id="Media Representation" />
+    <node id="Policy and Legislation" />
+    <node id="Suicide Prevalence" />
+    <edge source="Mental Health Issues" target="Suicide Prevalence" />
+    <edge source="Economic Factors" target="Suicide Prevalence" />
+    <edge source="Economic Factors" target="Social Isolation" />
+    <edge source="Economic Factors" target="Mental Health Issues" />
+    <edge source="Substance Abuse" target="Suicide Prevalence" />
+    <edge source="Substance Abuse" target="Social Isolation" />
+    <edge source="Access to Means" target="Suicide Prevalence" />
+    <edge source="Social Isolation" target="Suicide Prevalence" />
+    <edge source="Social Isolation" target="Mental Health Issues" />
+    <edge source="Historical Traumas" target="Suicide Prevalence" />
+    <edge source="Historical Traumas" target="Mental Health Issues" />
+    <edge source="Stigma Around Seeking Help" target="Suicide Prevalence" />
+    <edge source="Stigma Around Seeking Help" target="Mental Health Issues" />
+    <edge source="Media Representation" target="Suicide Prevalence" />
+    <edge source="Media Representation" target="Stigma Around Seeking Help" />
+    <edge source="Policy and Legislation" target="Suicide Prevalence" />
+    <edge source="Policy and Legislation" target="Access to Means" />
+    <edge source="Policy and Legislation" target="Stigma Around Seeking Help" />
+  </graph>
+</graphml>

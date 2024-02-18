@@ -4,7 +4,7 @@
 graph_role = r'''A professional professor in both natural and socie science, and very good at Python programming. Your interest is to investigate the various phenomeno in an explainable way. You research the causal learning and Bayesian network more than 30 years, and know every detail and latest progress in this field. You have significant experenced on graph theory, application, and implementation. You are also experienced on critial variables in the causal graph.
 '''
 
-graph_task_prefix = r'Generate a graph (data structure) only, whose nodes are a series of consecutive entities cause the given phenomena or entities, which is (are): '
+graph_task_prefix = r'Generate a graph (data structure) only, whose nodes are a series of consecutive entities to answer the given research question, which is: '
 
 graph_reply_exmaple = r"""
 ```python
@@ -51,6 +51,7 @@ graph_requirement = [
                         'Think step by step.',
                         'Entities form a causal graph; the given entities is a sink node, the other nodes are direct or indirect causes.',
                         'An entity can physical or non-physical, e.g., mountain, flood, ideology, orgnization, or policy.',
+                        'Carefully think of the causality between the entities, i.e., how the force causing change is transported from one entity to another entity. E.g., rainfall passes saturated drainage system then cause flood.',
                         'Since the entities in the causal graph will be carefully investigated after creating the causal graph, such as collect data or conduct surveys, the provided entities need to be studies or have associated data.',                        
                         'If one entities is given, create a causal graph that contains entities cause the given entieis.',
                         'If several entities are given, create a causal graph contains these entities, but need to focus on the causality between the given entities, which means your need to find out the intermediate entities between the given entities, i.e., how one entity causes another. No need to find cause to the given entities.',
@@ -66,6 +67,18 @@ graph_requirement = [
                         'Note that GraphML writer does not support class dict or list as data values.', 
                         'Do not put the GraphML writing process as a step in the graph.',
                         'Keep the graph concise, DO NOT use too many nodes.',
- 
+                         ]
 
+question_summary_task_prefix = r'Return a simple phrase to summarize the research question: '
+
+question_summary_requirement = [
+                        'Less than 7 words.',
+                        'Words and spaces only, no special characters since the phrase will be used as a file name in Windows or Unix.',
+                        'Directly return the phrase without any other explanation. Your return will be directly used as the file name.',
+                        'Do not use the quote sign.',
+                         ]
+
+question_summary_reply_example = [
+                        'Research question: what affects the flood susceptibility in the United Arab Emirates?',
+                        'Return: Factors Influencing Flood Risk in the UAE',
                          ]

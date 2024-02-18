@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="Public Health Policies" />
+    <node id="International Travel Control" />
+    <node id="Local Quarantine Measures" />
+    <node id="Public Mask Wearing" />
+    <node id="Vaccination Rates" />
+    <node id="Population Density" />
+    <node id="Healthcare System Capacity" />
+    <node id="Public Awareness and Behavior" />
+    <node id="Environmental Factors" />
+    <node id="Virus Mutation Rates" />
+    <node id="Testing and Reporting Efficiency" />
+    <node id="COVID Prevalence" />
+    <edge source="Public Health Policies" target="Local Quarantine Measures" />
+    <edge source="Public Health Policies" target="Public Mask Wearing" />
+    <edge source="Public Health Policies" target="Vaccination Rates" />
+    <edge source="Public Health Policies" target="Testing and Reporting Efficiency" />
+    <edge source="International Travel Control" target="COVID Prevalence" />
+    <edge source="Local Quarantine Measures" target="COVID Prevalence" />
+    <edge source="Public Mask Wearing" target="COVID Prevalence" />
+    <edge source="Vaccination Rates" target="COVID Prevalence" />
+    <edge source="Population Density" target="COVID Prevalence" />
+    <edge source="Healthcare System Capacity" target="COVID Prevalence" />
+    <edge source="Public Awareness and Behavior" target="COVID Prevalence" />
+    <edge source="Environmental Factors" target="COVID Prevalence" />
+    <edge source="Virus Mutation Rates" target="COVID Prevalence" />
+    <edge source="Testing and Reporting Efficiency" target="COVID Prevalence" />
+  </graph>
+</graphml>
